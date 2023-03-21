@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MainVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="My_silly_app__Str__reverse_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="windowShopperBG" translatesAutoresizingMaskIntoConstraints="NO" id="qjt-Ml-z5j">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="To Reverse" textAlignment="center" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="xdg-mK-ej4" customClass="CustomTextField" customModule="My_silly_app__Str__reverse_" customModuleProvider="target">
+                                <rect key="frame" x="16" y="197" width="358" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="68" id="2WA-3f-7dt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u47-ma-cAs">
+                                <rect key="frame" x="16" y="290" width="358" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="vqs-hX-TiZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
+                                <color key="textColor" red="0.95294117649999999" green="0.95294117649999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SO9-FC-Pb1">
+                                <rect key="frame" x="16" y="755" width="358" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="dqA-na-Fps"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Clear Textfield"/>
+                                <connections>
+                                    <action selector="clearPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rL0-wu-SRf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xdg-mK-ej4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="5YV-h5-KSZ"/>
+                            <constraint firstItem="u47-ma-cAs" firstAttribute="leading" secondItem="xdg-mK-ej4" secondAttribute="leading" id="9hd-W3-ZQ6"/>
+                            <constraint firstItem="SO9-FC-Pb1" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Ef5-oT-Xyb"/>
+                            <constraint firstItem="qjt-Ml-z5j" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="F9d-3Y-QyP"/>
+                            <constraint firstAttribute="bottom" secondItem="qjt-Ml-z5j" secondAttribute="bottom" id="LVy-A1-cEz"/>
+                            <constraint firstAttribute="trailing" secondItem="qjt-Ml-z5j" secondAttribute="trailing" id="QUG-jj-L4V"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SO9-FC-Pb1" secondAttribute="trailing" id="UnS-pM-mtq"/>
+                            <constraint firstItem="u47-ma-cAs" firstAttribute="top" secondItem="xdg-mK-ej4" secondAttribute="bottom" constant="25" id="aEd-se-8oq"/>
+                            <constraint firstItem="qjt-Ml-z5j" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="dkm-WH-yVE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xdg-mK-ej4" secondAttribute="trailing" constant="16" id="fF7-0f-mcH"/>
+                            <constraint firstItem="u47-ma-cAs" firstAttribute="trailing" secondItem="xdg-mK-ej4" secondAttribute="trailing" id="hTv-Jp-r2f"/>
+                            <constraint firstItem="SO9-FC-Pb1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="pd2-VL-2LO"/>
+                            <constraint firstItem="xdg-mK-ej4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="150" id="x5A-ah-KXf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="clearOutlet" destination="SO9-FC-Pb1" id="t3K-Bq-hjx"/>
+                        <outlet property="resultLBL" destination="u47-ma-cAs" id="l4T-Q6-sL5"/>
+                        <outlet property="toReverse" destination="xdg-mK-ej4" id="T8t-ee-wHA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="150.76923076923077" y="-280.09478672985779"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="xdg-mK-ej4">
+            <size key="intrinsicContentSize" width="96" height="29"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="windowShopperBG" width="414" height="736"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
